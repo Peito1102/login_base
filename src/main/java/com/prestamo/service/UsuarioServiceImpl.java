@@ -19,4 +19,8 @@ public class UsuarioServiceImpl implements UsuarioService {
 		return usuarioRepository.findAll();
 	}
 
+	@Override
+	public List<Usuario> buscarCorreoContraseña(String email_usua, String con_usua) {
+	    return usuarioRepository.buscarCorreoContraseña(email_usua, con_usua);
+	}
 }
