@@ -30,5 +30,18 @@ public class UsuarioServiceImpl implements UsuarioService {
 		return usuarioRepository.findByDni(dni);
 	}
 
+	@Override
+	public Usuario buscarPorEmail(String email) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Usuario registrarUsuario(Usuario usuario) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
 
 }
