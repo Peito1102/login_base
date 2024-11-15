@@ -5,6 +5,7 @@ import java.util.Date;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
@@ -26,10 +27,20 @@ public class Usuario {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int co_usua;
-	private String no_usua;
-	private String email_usua;
-	private String con_usua;
+	@Column(name = "co_usua")
+	private int codigoUsuario;
+	@Column(name = "no_usua")
+	private String nombre;
+	@Column(name = "ape_usua")
+	private String apellido;
+	
+	@Column(name = "dni_usua")
+	private String dni;
+	@Column(name = "email_usua")
+	private String email ;
+	private String username;
+	@Column(name = "con_usua")
+	private String contrasena;
 	
 	@JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
 	@ManyToOne(fetch = FetchType.LAZY)

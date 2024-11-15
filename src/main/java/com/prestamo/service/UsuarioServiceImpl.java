@@ -19,4 +19,16 @@ public class UsuarioServiceImpl implements UsuarioService {
 		return usuarioRepository.findAll();
 	}
 
+	@Override
+	public Usuario buscarPorUsername(String username) {
+		return usuarioRepository.findByUsername(username);
+	}
+
+	@Override
+	public Usuario buscarPorDni(String dni) {
+		// TODO Auto-generated method stub
+		return usuarioRepository.findByDni(dni);
+	}
+
+
 }
