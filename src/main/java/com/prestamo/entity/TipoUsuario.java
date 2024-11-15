@@ -1,5 +1,6 @@
 package com.prestamo.entity;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -15,6 +16,10 @@ import lombok.Setter;
 public class TipoUsuario {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int co_tipusua;
-	private String desc_trab;
+	
+	@Column(name = "co_tipusua")
+	private int codigo ;
+	
+	@Column(name="desc_trab")
+	private String descripcion;
 }

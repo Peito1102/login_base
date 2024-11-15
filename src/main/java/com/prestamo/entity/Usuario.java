@@ -45,18 +45,21 @@ public class Usuario {
 	@JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "co_tipusua")
-	private TipoUsuario co_tipusua;
+	private TipoUsuario tipoUsuario;
 	
-	private Boolean st_autenticacion;
-	private Boolean st_registro;
+	@Column(name = "st_autenticacion")
+	private Boolean autenticacion;
+	@Column(name = "st_registro")
+	private Boolean estado;
 	
 	@JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "co_usua_crea")
-	private Usuario co_usua_crea;
+	private Usuario usuarioCreacion;
 	
 	@Temporal(TemporalType.TIMESTAMP)
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd hh:mm:ss")
-	private Date fe_usua_crea;
+	@Column(name = "fe_usua_crea")
+	private Date fechaCreacion;
 	
 }
