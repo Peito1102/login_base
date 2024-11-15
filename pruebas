@@ -1,0 +1,32 @@
+rutas de prueba
+
+lista
+
+http://localhost:8092/url/usuario/lista
+
+buscarPorUsername
+
+http://localhost:8092/url/usuario/buscarPorUsername/Catherine
+
+buscarPorDniusua
+
+http://localhost:8092/url/usuario/buscarPorDniusua/12345678
+
+buscarPorEmail
+
+http://localhost:8092/url/usuario/buscarPorEmail/catherine@gmail.com
+
+insertar
+
+http://localhost:8092/url/usuario/registraUsuario
+
+ejemplo
+{
+
+	"nombre": "Carina",
+	"apellido": "Valdeaefvrrama",
+	"dni": "74589632",
+	"email": "evfvefvevever@gmail.com",
+	"username": "jajaja",
+	"contrasena": "password12102"
+}

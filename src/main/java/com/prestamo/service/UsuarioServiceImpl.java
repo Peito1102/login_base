@@ -33,15 +33,14 @@ public class UsuarioServiceImpl implements UsuarioService {
 	@Override
 	public Usuario buscarPorEmail(String email) {
 		// TODO Auto-generated method stub
-		return null;
+		return usuarioRepository.findByEmail(email);
 	}
 
 	@Override
-	public Usuario registrarUsuario(Usuario usuario) {
+	public Usuario insertaUsuario(Usuario usuario) {
 		// TODO Auto-generated method stub
-		return null;
+		return usuarioRepository.save(usuario);
 	}
 
-	
 
 }

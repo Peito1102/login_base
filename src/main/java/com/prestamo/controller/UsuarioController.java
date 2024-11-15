@@ -38,7 +38,7 @@ public class UsuarioController {
 		return usuarioService.buscarPorDni(dni);
 	}
 	
-	@GetMapping("/buscarPorEmailusua/{email}")
+	@GetMapping("/buscarPorEmail/{email}")
 	public Usuario buscarPorEmail(@PathVariable String email){
 		return usuarioService.buscarPorEmail(email);
 	}
@@ -55,13 +55,12 @@ public class UsuarioController {
 		tipoUsuario.setCodigo(1);
 		objUsuario.setTipoUsuario(tipoUsuario);
 		
-		Usuario objSalida = usuarioService.registrarUsuario(objUsuario);
+		Usuario objSalida = usuarioService.insertaUsuario(objUsuario);
 		if (objSalida == null) {
 			salida.put("mensaje", "Error en el registro");
-		}
-		else {
-			salida.put("mensaje", "Registro de usuario con el ID: >>> " + objUsuario.getCodigoUsuario() + 
-										" >>> Username: >> "+ objUsuario.getUsername());
+		}else {
+			salida.put("mensaje", "Registro de usuario con el ID >>> " + objUsuario.getCodigoUsuario() + 
+										" >>> Username >> "+ objUsuario.getUsername());
 		}
 		return ResponseEntity.ok(salida);
 	}
