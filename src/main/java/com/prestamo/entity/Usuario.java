@@ -34,12 +34,13 @@ public class Usuario {
 	@Column(name = "ape_usua")
 	private String apellido;
 	
-	@Column(name = "dni_usua")
+	@Column(name = "dni_usua",unique = true)
 	private String dni;
-	@Column(name = "email_usua")
+	@Column(name = "email_usua",unique = true)
 	private String email ;
+	@Column(unique = true)
 	private String username;
-	@Column(name = "con_usua")
+	@Column(name = "con_usua",unique = true)
 	private String contrasena;
 	
 	@JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })

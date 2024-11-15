@@ -10,6 +10,6 @@ public interface UsuarioService {
 	 public abstract Usuario buscarPorUsername(String username);
 	 public abstract Usuario buscarPorDni(String dni);
 	 public abstract Usuario buscarPorEmail(String email);
-	 public abstract Usuario registrarUsuario(Usuario usuario);
-
+	 public abstract Usuario insertaUsuario(Usuario usuario);
 }
+
