@@ -6,4 +6,8 @@ import com.prestamo.entity.Usuario;
 
 public interface UsuarioService {
 	public abstract List<Usuario> listaTodos();
+	
+	 public abstract Usuario buscarPorUsername(String username);
+
+	 public abstract Usuario buscarPorDni(String dni);
 }

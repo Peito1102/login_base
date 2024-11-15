@@ -28,7 +28,10 @@ public class Usuario {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int co_usua;
 	private String no_usua;
+	private String ape_usua;
+	private String dni_usua;
 	private String email_usua;
+	private String username;
 	private String con_usua;
 	
 	@JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
