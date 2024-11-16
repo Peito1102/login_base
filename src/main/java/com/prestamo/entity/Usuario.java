@@ -40,7 +40,7 @@ public class Usuario {
 	private String email ;
 	@Column(unique = true)
 	private String username;
-	@Column(name = "con_usua",unique = true)
+	@Column(name = "con_usua")
 	private String contrasena;
 	
 	@JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
